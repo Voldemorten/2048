@@ -1,5 +1,6 @@
 # A simple 2048
 Created with JS (and jQuery).
+
 Just open index.html to run.
 
 Note a few bugs:
