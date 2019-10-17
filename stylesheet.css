@@ -1,0 +1,68 @@
+#game, #demoGame {
+    width: 225px;
+    height: 225px;
+    background: grey;
+    border: 2px solid black;
+}
+
+.tile {
+    width: 47px;
+    height: 47px;
+    background: whitesmoke;
+    text-align: center;
+    border: 1px solid black;
+    margin: 2px 2px 2px 2px;
+    display: inline-block;
+    line-height: 47px; /* Vertical alignment */
+}
+
+.value {
+    line-height: 47px;
+}
+
+#newTileBtn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: antiquewhite;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.color0 {
+    backgound-color:#FFFFFF
+}
+.color2 {
+    background-color:#F6CED8
+}
+.color4 {
+     background-color:#F7BE81
+}
+.color8 {
+    background-color:#F3F781
+}
+.color16 {
+    background-color:#BEF781
+}
+.color32 {
+    background-color:#81F7D8
+}
+.color64 {
+    background-color:#58D3F7
+}
+.color128 {
+    background-color:#FA58F4
+}
+.color256 {
+    background-color:#A901DB
+}
+.color512 {
+    background-color:#01DF3A
+}
+.color1024 {
+    background-color:#D7DF01
+}
+.color2048 {
+    color:#D7DF01
+}
