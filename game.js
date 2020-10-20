@@ -146,9 +146,10 @@ function drawDemoGrid() {
 function addRandomTile() {
     var tilePlaced = false;
     while (!tilePlaced && !gameOver) {
+        console.log("inf");
         var randRow = Math.floor(Math.random() * size);
         var randColumn = Math.floor(Math.random() * size);
-        if (grid[randRow][randColumn]==null) {
+        if (!grid[randRow][randColumn]) {
             //a value either 2 or 4. 75% of times it's 2.
             var value = Math.random();
             if (value<=0.75) value = 2;
@@ -159,7 +160,7 @@ function addRandomTile() {
             tilePlaced = true;
             updateGrid();
         }
-        //else checkGameOver();
+        else checkGameOver();
     }
 
 }
@@ -168,7 +169,7 @@ function checkGameOver() {
     var zeroFound = false;
     for (var i=0;i<size;i++) {
         for (var j = 0; j < size; j++) {
-            if (grid[j][i].value==0) {
+            if (!grid[j][i] || grid[j][i].value==0) {
                 zeroFound = true;
                 break;
             }
@@ -192,8 +193,8 @@ function addInteraction() {
     });
 
     //keyboard
-    $(window).keyup(event, function () {
-        switch (event.keyCode) {
+    $(window).on("keyup", function (e) {
+        switch (e.keyCode) {
             case 37:
                 moveLeft(); break;
             case 38:
